@@ -1,0 +1,126 @@
+<!-- begin row -->
+<div class="row">
+    <!-- begin col-8 -->
+    <div class="col-xl-12">
+        <!-- begin panel -->
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <h4 class="panel-title">Pacientes</h4>
+                <div class="panel-heading-btn">
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
+                        data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
+                        data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
+                        data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
+                        data-click="panel-remove"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+            <!--Formulario de registro de usuarios-->
+            <div class="panel-body">
+                <form class="form-horizontal" data-parsley-validate="true" name="demo-form">
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="tipodoc">Tipo Documento :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <select class="form-control">
+                                <option>Cedula ciudadania</option>
+                                <option>Tarjeta de identidad</option>
+                                <option>Cedula extranjera</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="documento">Documento :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="number" id="documento" name="documento"
+                                placeholder="Documento de identificacion" data-parsley-required="true" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="pnombre">Primer Nombre :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="text" id="pnombre" name="pnombre"
+                                placeholder="Primer nombre" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="snombre">Segundo Nombre :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="text" id="snombre" name="snombre"
+                                placeholder="Segundo nombre" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="papellido">Primer Apellido :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="text" id="papellido" name="papellido"
+                                placeholder="Primer apellido" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="sapellido">Segundo Apellido :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="text" id="sapellido" name="sapellido"
+                                placeholder="Segundo apellido" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="fnacimiento">Fecha Nacimiento :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="date" id="fnacimiento" name="fnacimiento" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="sexo">Sexo :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="text" id="sexo" name="sexo" placeholder="Sexo" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="direccion">Direccion :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="text" id="direccion" name="direccion"
+                                placeholder="Direccion" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="eps">Eps - Ips :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="text" id="eps" name="eps"
+                                placeholder="Eps o Ips del paciente" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="telefono">Telefono :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <input class="form-control" type="number" id="telefono" name="telefono"
+                                placeholder="Telefono movil" />
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="regimen">Regimen :</label>
+                        <div class="col-md-8 col-sm-8">
+                            <select class="form-control">
+                                <option>Contributivo</option>
+                                <option>Subsidiado</option>
+                                <option>Vinculado</option>
+                                <option>Especial</option>
+                                <option>Otro</option>
+                                <input class="form-control" type="text" id="otroregimen" name="otroregimen"
+                                    placeholder="Especifique cual" />
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row m-b-0">
+                        <label class="col-md-4 col-sm-4 col-form-label">&nbsp;</label>
+                        <div class="col-md-8 col-sm-8">
+                            <button type="submit" class="btn btn-primary">Validar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end panel -->
+    </div>
+</div>

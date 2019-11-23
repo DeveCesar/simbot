@@ -1,0 +1,62 @@
+<!-- begin breadcrumb -->
+<ol class="breadcrumb float-xl-right">
+  <li class="breadcrumb-item"><a href="javascript:;">Inicio</a></li>
+  <li class="breadcrumb-item"><a href="javascript:;">Simbot | RUCS</a></li>
+  <li class="breadcrumb-item active">Pacientes</li>
+</ol>
+<!-- end breadcrumb -->
+
+  
+
+<h1 class="page-header">Manejo de medicos <small>Registro de informacion</small></h1>
+<!-- end page-header -->
+<div class="separator">
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+   Registrar medico
+</button>
+</div>
+<br>
+<panel title="Tabla medicos" footerClass="p-b-0 p-t-20 b-t-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <input *ngIf="config.filtering" placeholder="Filtrar toda la columna" [ngTableFiltering]="config.filtering" class="form-control" (tableChanged)="onChangeTable(config)"/>
+    </div>
+    <div class="col-lg-8 text-center">
+      <label class="col-form-label pt-2 pb-0 pt-xl-0 float-lg-right" *ngIf="config.paging">Page: {{page}} / {{numPages}}</label>
+    </div>
+  </div>
+  <ng-container outsideBody>
+    <div class="table-responsive text-nowrap">
+      <ng-table [config]="config" (tableChanged)="onChangeTable(config)" (cellClicked)="onCellClick($event)" [rows]="rows" [columns]="columns"></ng-table>
+    </div>
+  </ng-container>
+  <ng-container footer>
+    <ngb-pagination *ngIf="config.paging" class="d-flex justify-content-center" [(page)]="page" [maxSize]="maxSize" [boundaryLinks]="true" [collectionSize]="length" [rotate]="false" (pageChange)="onChangeTable(config, $event)" (numPages)="numPages = $event"></ngb-pagination>
+  </ng-container>
+</panel>
+
+<!-- Modal medicos -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Formulario registro </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row m-b-15">
+           <input type="text" name="nombre" class="form-control" placeholder="Nombre medico">
+        </div>
+        <div class="form-group row m-b-15">
+           <input type="text" name="especialidad" class="form-control" placeholder="Especialidad">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
